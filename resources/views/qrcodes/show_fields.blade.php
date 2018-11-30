@@ -4,6 +4,8 @@
     <p>{!! $qrcode->id !!}</p>
 </div>
 
+
+
 <!-- User Id Field -->
 <div class="form-group">
     {!! Form::label('user_id', 'User Id:') !!}
@@ -43,7 +45,9 @@
 <!-- Qrcode Path Field -->
 <div class="form-group">
     {!! Form::label('qrcode_path', 'Qrcode Path:') !!}
-    <p>{!! $qrcode->qrcode_path !!}</p>
+    <p>{!! $qrcode->qrcode_path !!}
+      <img src="{{asset($qrcode->qrcode_path)}}">
+    </p>
 </div>
 
 <!-- Amount Field -->
@@ -69,4 +73,3 @@
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $qrcode->updated_at !!}</p>
 </div>
-
