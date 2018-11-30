@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15c0341be2b5b3d72e995e965a00d042",
+    "content-hash": "052889ea132a3a8f85b70f86f5562843",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3097,6 +3097,67 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
+            "name": "uxweb/sweet-alert",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uxweb/sweet-alert.git",
+                "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/5b74ad1e51b913ede67c17c667dad6c162766fdc",
+                "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "UxWeb\\SweetAlert\\SweetAlertServiceProvider"
+                    ],
+                    "aliases": {
+                        "Alert": "UxWeb\\SweetAlert\\SweetAlert"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+                },
+                "files": [
+                    "src/SweetAlert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Uziel Bueno",
+                    "email": "ux.webs@gmail.com"
+                }
+            ],
+            "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+            "keywords": [
+                "alert",
+                "laravel",
+                "notifier",
+                "sweet"
+            ],
+            "time": "2018-11-20T19:21:08+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.5.1",
             "source": {
@@ -3145,6 +3206,93 @@
                 "environment"
             ],
             "time": "2018-07-29T20:33:41+00:00"
+        },
+        {
+            "name": "werneckbh/laravel-qr-code",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/werneckbh/laravel-qr-code.git",
+                "reference": "df3875022158d0f8355f54219955e32f9a9ba080"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/werneckbh/laravel-qr-code/zipball/df3875022158d0f8355f54219955e32f9a9ba080",
+                "reference": "df3875022158d0f8355f54219955e32f9a9ba080",
+                "shasum": ""
+            },
+            "require": {
+                "werneckbh/qr-code": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelQRCode\\Providers\\QRCodeServiceProvider"
+                    ],
+                    "aliases": {
+                        "QRCode": "LaravelQRCode\\Facades\\QRCode"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelQRCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Werneck",
+                    "email": "brunovaulawerneck@gmail.com"
+                }
+            ],
+            "description": "QR Code Generator for PHP wrapper for Laravel",
+            "time": "2018-02-12T20:01:20+00:00"
+        },
+        {
+            "name": "werneckbh/qr-code",
+            "version": "2.1.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/werneckbh/qr-code.git",
+                "reference": "ec66df0ebd5a3e1ea895bb5fba82ab9c3b9ff8f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/werneckbh/qr-code/zipball/ec66df0ebd5a3e1ea895bb5fba82ab9c3b9ff8f0",
+                "reference": "ec66df0ebd5a3e1ea895bb5fba82ab9c3b9ff8f0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "khanamiryan/qrcode-detector-decoder": "^1.0",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers/constants.php",
+                    "src/helpers/functions.php"
+                ],
+                "psr-4": {
+                    "QR_Code\\": "src/QR_Code/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Vaula Werneck",
+                    "email": "brunovaulawerneck@gmail.com"
+                }
+            ],
+            "description": "QR Code Generator for PHP",
+            "time": "2018-02-04T20:29:27+00:00"
         },
         {
             "name": "zircote/swagger-php",
@@ -4972,8 +5120,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "infyomlabs/laravel-generator": 20,
         "infyomlabs/adminlte-templates": 20,
+        "infyomlabs/laravel-generator": 20,
         "infyomlabs/swagger-generator": 20,
         "jlapp/swaggervel": 20
     },
