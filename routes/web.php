@@ -20,14 +20,16 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Auth::routes();
+//limiting access to logged in users
+    Route::group(['middleware'=>'auth'], function ()
+    {
+      // code...
 
-Route::get('/home', 'HomeController@index');
+            Route::resource('qrcodes', 'QrcodeController');
 
-Route::resource('qrcodes', 'QrcodeController');
+            Route::resource('roles', 'RoleController');
 
-Route::resource('roles', 'RoleController');
+            Route::resource('transactions', 'TransactionController');
 
-Route::resource('transactions', 'TransactionController');
-
-Route::resource('users', 'UserController');
+            Route::resource('users', 'UserController');
+});
