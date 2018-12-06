@@ -3,7 +3,6 @@
         <tr>
         <th>Product Name</th>
         <th>Website</th>
-
         <th>Amount</th>
         <th>Status</th>
             <th colspan="3">Action</th>
